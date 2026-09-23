@@ -1,0 +1,10 @@
+pool:SunnyPool
+stages:
+- stage : TerraformValidate
+  jobs:
+  - job:Terraformvalidatejob
+    steps:
+    - task: TerraformTask@5
+      inputs:
+        provider: 'azurerm'
+        command: 'init'
